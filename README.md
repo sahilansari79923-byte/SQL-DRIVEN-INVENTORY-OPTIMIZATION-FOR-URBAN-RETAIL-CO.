@@ -2,7 +2,7 @@
 Dashboard / Report Link:https://bitmesra-my.sharepoint.com/:u:/g/personal/btech10296_22_bitmesra_ac_in/IQB4aYn9iSjPSYK1FNPK46E-Aa9yjkPJME5xal1_WAAxxsE?e=cfi9KT
 
 
-# Problem Statement
+## Problem Statement
 
 Urban Retail Co. faces major inventory challenges, including frequent stockouts of fast-moving SKUs and excessive overstock of slow-moving items.
 This project applies SQL-driven analytics on relational datasets to:
