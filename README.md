@@ -1,151 +1,217 @@
-# SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO.
+# SQL-Driven Inventory Optimization for Urban Retail Co.
+Dashboard / Report Link:https://bitmesra-my.sharepoint.com/:u:/g/personal/btech10296_22_bitmesra_ac_in/IQB4aYn9iSjPSYK1FNPK46E-Aa9yjkPJME5xal1_WAAxxsE?e=cfi9KT
 
-SQL-Driven Inventory Optimization & Dashboarding
-Dashboard / Report Link : [https://bitmesra-my.sharepoint.com/:u:/g/personal/btech10296_22_bitmesra_ac_in/IQB4aYn9iSjPSYK1FNPK46E-Aa9yjkPJME5xal1_WAAxxsE?e=cfi9KT]
-Problem Statement
-Urban Retail Co. faces a classic inventory dilemma—frequent stockouts of fast-moving items and overstock of slow-moving products.
-This project uses SQL-based analytics on a relational database to:
 
-Monitor real-time stock across products and stores
-Detect low-stock and stockout risks early
+# Problem Statement
+
+Urban Retail Co. faces major inventory challenges, including frequent stockouts of fast-moving SKUs and excessive overstock of slow-moving items.
+This project applies SQL-driven analytics on relational datasets to:
+
+Monitor real-time stock across stores and products
+
+Detect low-stock and stockout risks
+
 Identify dead stock and excess inventory
-Measure the impact of discounts and promotions on sales
-Using these insights, the company can reduce stockouts by an estimated 40–60%, cut overstock by 30–45%, improve inventory turnover by 25–35%, and free up 12–20% of working capital tied up in dead stock.
 
-Steps followed
-Step 1 : Loaded transactional data (sales), on-hand inventory, product master, store master, calendar, forecast, and promotions from CSV files into MySQL.
+Measure promotional and discount impact on sales
 
-Step 2 : Opened MySQL Workbench and designed a relational schema. Primary keys, foreign keys, and indexes were created for tables such as inventory, sales, products, stores, and promotions to ensure data integrity and faster querying.
+Data insights from SQL enable the company to achieve:
 
-Step 3 : Performed data profiling and cleaning (missing values, inconsistent IDs, negative inventory) and standardized data types for dates, numeric fields, and categorical columns.
+40–60% reduction in stockouts
 
-Step 4 : It was observed that in some rows timestamps or forecast values were missing. These rows were handled appropriately (ignored for certain KPIs when they formed a very small percentage of the dataset).
+30–45% reduction in overstock
 
-Step 5 : For calculating key KPIs like inventory turnover, stockout risk, and forecast accuracy, null or non-applicable values were excluded from calculations when they did not represent valid business events.
+25–35% improvement in inventory turnover
 
-Step 6 : In the reporting/BI layer (Excel / Power BI), a clean theme was applied so that stock KPIs, alerts, and charts are visually consistent and easy to read.
+12–20% working capital released from dead stock
 
-Step 7 : Since the data contains several inventory metrics (on-hand stock, units sold, forecast, discount, promotion flags), visuals such as bar charts and KPI cards were added to better represent stock levels, low-stock alerts, and turnover.
+Steps Followed
+Step 1:
 
-Step 8 : Visual filters (Slicers) were added for fields like Store, Product Category, Promotion Flag, and Holiday/Season to slice the insights for different segments.
+Loaded sales, inventory, product master, store master, calendar, forecast, and promotions CSV files into MySQL.
 
-Step 9 : Card visuals were used to show high-level KPIs such as average inventory turnover, number of low-stock SKUs, and estimated capital locked in overstock.
-Using visual level filters, invalid or null values were excluded from these KPI calculations.
+Step 2:
 
-     Although, by default, blank values are ignored in most aggregations, explicit filtering was applied for clarity.
-Step 10 : A bar chart was created to represent current stock by product/category and store, helping identify overstocked and understocked areas at a glance.
+Designed a complete relational schema in MySQL Workbench with primary keys, foreign keys, and indexes for faster query performance.
 
-Step 11 : Another visual was used to represent movement type of products (Fast / Moderate / Slow) based on inventory turnover, helping stakeholders focus on the right SKUs for promotions or rationalization.
+Step 3:
 
-(a) Fast-moving SKUs (high turnover)
+Performed data profiling and cleaning (missing values, inconsistent IDs, negative stocks) and standardized all data types.
 
-(b) Moderate-moving SKUs
+Step 4:
 
-(c) Slow-moving SKUs (very low turnover / dead stock)
+Identified missing timestamps or forecasted demand values; handled them appropriately depending on KPI requirements.
 
-These categories were derived from SQL-based turnover calculations.
+Step 5:
 
-Step 12 : In the report view, under the insert tab, text boxes were used to show project title, company name, and a brief explanation of the SQL-driven approach to inventory optimization.
+Excluded null or invalid entries for KPIs such as turnover, forecast accuracy, and stockout risk when the values did not represent true business events.
 
-Step 13 : Company branding elements such as logo and colored shapes were added to the layout to give the report a professional look.
+Step 6:
 
-Step 14 : A key SQL query was created to segment products based on movement (Fast, Moderate, Slow).
-For example:
+Applied a clean design theme in Excel / Power BI for uniform KPI cards, alerts, and charts.
 
-  SELECT
-      Product_ID,
-      Category,
-      SUM(Units_Sold) AS Total_Units_Sold,
-      ROUND(SUM(Units_Sold) / NULLIF(SUM(Inventory_Level), 0), 2) AS Turnover_Rate,
-      CASE
-          WHEN SUM(Units_Sold) / NULLIF(SUM(Inventory_Level), 0) > 5 THEN 'Fast Moving'
-          WHEN SUM(Units_Sold) / NULLIF(SUM(Inventory_Level), 0) < 1 THEN 'Slow Moving'
-          ELSE 'Moderate'
-      END AS Movement_Type
-  FROM inventory
-  GROUP BY Product_ID, Category
-  ORDER BY Turnover_Rate DESC;
-Snapshot of this segmentation output,
+Step 7:
 
-Step 15 : A SQL query was created to find current stock by product and store.
+Added charts for stock levels, turnover, low-stock alerts, and promotion impact using the pre-processed SQL outputs.
 
-  SELECT
-      Store_ID,
-      Product_ID,
-      SUM(Inventory_Level) AS Total_Stock
-  FROM inventory
-  GROUP BY Store_ID, Product_ID;
-A card / matrix visual was used to summarize total stock and highlight low-stock stores.
+Step 8:
 
-Step 16 : Another SQL query was written to calculate Inventory Turnover Ratio:
+Added slicers for Store, Product Category, Promotion Flag, and Season/Holiday to filter insights for segments.
 
-  SELECT
-      Product_ID,
-      Category,
-      SUM(Units_Sold) AS Total_Units_Sold,
-      SUM(Inventory_Level) AS Total_Inventory,
-      ROUND(SUM(Units_Sold) / NULLIF(SUM(Inventory_Level), 0), 2) AS Inventory_Turnover
-  FROM inventory
-  GROUP BY Product_ID, Category
-  ORDER BY Inventory_Turnover DESC;
-KPI cards and bar charts were used to represent turnover by product/category.
+Step 9:
 
-Step 17 : A SQL query was created to calculate the Impact of Promotions on Sales (e.g., holiday promotions):
+Used KPI Cards to show:
 
-  SELECT
-      Holiday_Promotion,
-      ROUND(AVG(Units_Sold), 2) AS Avg_Units_Sold,
-      COUNT(*) AS Total_Records
-  FROM inventory
-  GROUP BY Holiday_Promotion;
-This was visualized using bar/column charts to compare promoted vs non-promoted periods.
+Average Inventory Turnover
 
-Step 18 : The final report combining business summary, SQL queries, KPIs, and visuals was exported as a PDF (“SQL-Driven Inventory Optimization for Urban Retail Co.”) and is planned to be further extended into a Power BI dashboard.
+Total Low-Stock SKUs
 
-Snapshot of Dashboard (EXCEL Dashboard)
+Working Capital Locked in Overstock
+
+Null/invalid values were excluded using visual-level filters.
+
+Step 10:
+
+Created a bar chart to visualize Current Stock by Product & Store, highlighting overstock and understock conditions.
+
+Step 11:
+
+Segmented product movement using SQL-based turnover calculations:
+
+Fast-moving
+
+Moderate
+
+Slow-moving / Dead stock
+
+This helps identify SKUs needing replenishment, markdown, or discontinuation.
+
+Step 12:
+
+Added text boxes with project title and brief description of SQL-driven optimization.
+
+Step 13:
+
+Added company branding (logo, shapes) for a clean and professional layout.
+
+Step 14:
+
+Created SQL query for SKU movement segmentation:
+
+SELECT
+    Product_ID,
+    Category,
+    SUM(Units_Sold) AS Total_Units_Sold,
+    ROUND(SUM(Units_Sold) / NULLIF(SUM(Inventory_Level), 0), 2) AS Turnover_Rate,
+    CASE
+        WHEN SUM(Units_Sold) / NULLIF(SUM(Inventory_Level), 0) > 5 THEN 'Fast Moving'
+        WHEN SUM(Units_Sold) / NULLIF(SUM(Inventory_Level), 0) < 1 THEN 'Slow Moving'
+        ELSE 'Moderate'
+    END AS Movement_Type
+FROM inventory
+GROUP BY Product_ID, Category
+ORDER BY Turnover_Rate DESC;
+
+Step 15:
+
+SQL query to calculate Current Stock by Product & Store:
+
+SELECT
+    Store_ID,
+    Product_ID,
+    SUM(Inventory_Level) AS Total_Stock
+FROM inventory
+GROUP BY Store_ID, Product_ID;
+
+Step 16:
+
+SQL query for Inventory Turnover Ratio (ITR):
+
+SELECT
+    Product_ID,
+    Category,
+    SUM(Units_Sold) AS Total_Units_Sold,
+    SUM(Inventory_Level) AS Total_Inventory,
+    ROUND(SUM(Units_Sold) / NULLIF(SUM(Inventory_Level), 0), 2) AS Inventory_Turnover
+FROM inventory
+GROUP BY Product_ID, Category
+ORDER BY Inventory_Turnover DESC;
+
+Step 17:
+
+SQL query to analyze Promotion Impact on Sales:
+
+SELECT
+    Holiday_Promotion,
+    ROUND(AVG(Units_Sold), 2) AS Avg_Units_Sold,
+    COUNT(*) AS Total_Records
+FROM inventory
+GROUP BY Holiday_Promotion;
+
+Step 18:
+
+Compiled SQL results, KPIs, and visuals into a single-page PDF report, later extended into a Power BI dashboard.
+
+Dashboard Snapshot (Excel Dashboard)
+
+(Insert screenshot here—already provided)
+
 Insights
-A single-page report was created using SQL outputs and supporting visuals.
+[1] Inventory & Availability Overview
 
-Following inferences can be drawn from the dashboard;
+Real-time stock tracking enables early stockout alerts.
 
-[1] Inventory & Stock Availability Overview
-Real-time stock tracking and low-inventory queries enable early identification of stockout risks.
-With proper use of these alerts, stockout incidents can potentially reduce by 40–60%, improving product availability on shelves.
-The Current Stock by Product and Store view quickly highlights which stores or SKUs need immediate replenishment.
+Using these alerts, stockouts can reduce 40–60%.
+
+Product/Store stock view helps prioritize replenishment.
+
 [2] Overstock, Turnover & Working Capital
-Identification and clearance of slow-moving / overstocked items can reduce excess inventory by 30–45%.
-Average inventory turnover ratios improve by 25–35%, indicating healthier inventory flow and less stagnant stock.
-Through inventory optimization, the company can potentially unlock 12–20% of working capital that was previously tied up in dead stock.
+
+Identifying slow-moving SKUs reduces excess inventory by 30–45%.
+
+Inventory turnover improves by 25–35%.
+
+Eliminating dead stock releases 12–20% of blocked working capital.
+
 [3] Forecast Accuracy & Demand Planning
-By comparing forecasted demand vs. actual sales, SQL queries help track forecast error at product and category level.
-Basic forecast-accuracy tracking and adjustment of safety stock and lead times can reduce forecast error by 15–20%, supporting more reliable purchase planning.
-[4] Some other insights
-4.1 Stock Movement & Product Performance
-4.1.1) Products tagged as Fast Moving contribute a large share of sales and must be protected from stockouts.
 
-4.1.2) Slow-moving SKUs occupy shelf and warehouse space without generating proportional sales and are candidates for markdowns or discontinuation.
+SQL comparisons between forecast vs actual sales reveal forecasting gaps.
 
-4.1.3) Moderate movers can be targeted with selective promotions to boost their contribution without heavy discounting.
+Adjusting safety stock and lead times reduces forecast error by 15–20%.
 
-     thus, focusing replenishment on fast movers and actively managing slow movers improves both service levels and profitability.
+[4] Additional Insights
+4.1 Stock Movement & SKU Performance
+
+Fast movers drive major sales → must be protected from stockouts.
+
+Slow movers waste storage → ideal for discounts or discontinuation.
+
+Moderate movers respond well to selective promotions.
+
+→ Prioritizing fast movers and rationalizing slow movers increases profits and service levels.
+
 4.2 Promotions & Discounts
-4.2.1) During key holiday promotions, sales increased by 10–18% based on the promotion impact query.
 
-4.2.2) Some categories rely heavily on discounts but show limited gain in volume, indicating margin leakage and the need for better promotion design.
+Holiday promotions increased sales by 10–18%.
 
-     thus, aligning promotions with the right SKUs and using data-backed thresholds prevents over-discounting and protects margins.
+Some categories show margin loss due to ineffective discounting.
+
+→ Smarter, data-backed promotions prevent margin erosion.
+
 4.3 Customer Service & Availability
-4.3.1) With fewer stockouts and better on-shelf availability, customer satisfaction can improve by 20–30%, as suggested by similar retail case studies.
 
-4.3.2) Reliable product availability reduces lost sales and enhances the overall shopping experience.
+Fewer stockouts improve customer satisfaction by 20–30%.
 
-   thus, inventory optimization directly supports better customer service, repeat purchases, and stronger brand perception.
+Better shelf availability reduces lost sales.
+
+→ Inventory optimization directly improves customer experience.
+
 4.4 Process & Analytics
-4.4.1) SQL-based automation replaces manual spreadsheet checks, reducing errors and saving analyst time.
 
-4.4.2) Standardized KPIs (stockout risk, turnover, overstock, promotion impact) create a common language for operations, merchandising, and finance teams.
+SQL automation replaces error-prone spreadsheets.
 
-4.4.3) Extending these SQL views into dashboards with alerts helps teams act faster on low-stock and overstock signals.
+Standardized KPIs unify operations, merchandising, and finance.
 
-    thus, automating analytics, monitoring KPIs regularly, and embedding them into decision workflows can substantially improve inventory efficiency and overall business performance.
-![Dashboard Preview](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/Screenshot%202025-12-04%20145611.png)
+Dashboards enable faster response to stock issues.
+
+→ Continuous monitoring and automation significantly improve operational efficiency.
