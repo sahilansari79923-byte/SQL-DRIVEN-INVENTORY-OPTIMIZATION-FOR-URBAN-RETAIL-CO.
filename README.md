@@ -148,3 +148,4 @@ Basic forecast-accuracy tracking and adjustment of safety stock and lead times c
 4.4.3) Extending these SQL views into dashboards with alerts helps teams act faster on low-stock and overstock signals.
 
     thus, automating analytics, monitoring KPIs regularly, and embedding them into decision workflows can substantially improve inventory efficiency and overall business performance.
+![Dashboard Preview](https://github.com/the-mansi-goel/Ski-dashboard/blob/main/Snapshot%20of%20the%20Dahbaord.png)
