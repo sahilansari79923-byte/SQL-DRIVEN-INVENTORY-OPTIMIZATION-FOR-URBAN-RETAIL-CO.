@@ -17,48 +17,48 @@ Measure promotional and discount impact on sales
 
 Data insights from SQL enable the company to achieve:
 
-40–60% reduction in stockouts
+### 40–60% reduction in stockouts
 
-30–45% reduction in overstock
+### 30–45% reduction in overstock
 
-25–35% improvement in inventory turnover
+### 25–35% improvement in inventory turnover
 
-12–20% working capital released from dead stock
+### 12–20% working capital released from dead stock
 
 Steps Followed
-Step 1:
+## Step 1:
 
 Loaded sales, inventory, product master, store master, calendar, forecast, and promotions CSV files into MySQL.
 
-Step 2:
+### Step 2:
 
 Designed a complete relational schema in MySQL Workbench with primary keys, foreign keys, and indexes for faster query performance.
 
-Step 3:
+### Step 3:
 
 Performed data profiling and cleaning (missing values, inconsistent IDs, negative stocks) and standardized all data types.
 
-Step 4:
+### Step 4:
 
 Identified missing timestamps or forecasted demand values; handled them appropriately depending on KPI requirements.
 
-Step 5:
+### Step 5:
 
 Excluded null or invalid entries for KPIs such as turnover, forecast accuracy, and stockout risk when the values did not represent true business events.
 
-Step 6:
+### Step 6:
 
 Applied a clean design theme in Excel / Power BI for uniform KPI cards, alerts, and charts.
 
-Step 7:
+### Step 7:
 
 Added charts for stock levels, turnover, low-stock alerts, and promotion impact using the pre-processed SQL outputs.
 
-Step 8:
+### Step 8:
 
 Added slicers for Store, Product Category, Promotion Flag, and Season/Holiday to filter insights for segments.
 
-Step 9:
+### Step 9:
 
 Used KPI Cards to show:
 
@@ -70,11 +70,11 @@ Working Capital Locked in Overstock
 
 Null/invalid values were excluded using visual-level filters.
 
-Step 10:
+### Step 10:
 
 Created a bar chart to visualize Current Stock by Product & Store, highlighting overstock and understock conditions.
 
-Step 11:
+### Step 11:
 
 Segmented product movement using SQL-based turnover calculations:
 
@@ -86,15 +86,15 @@ Slow-moving / Dead stock
 
 This helps identify SKUs needing replenishment, markdown, or discontinuation.
 
-Step 12:
+### Step 12:
 
 Added text boxes with project title and brief description of SQL-driven optimization.
 
-Step 13:
+### Step 13:
 
 Added company branding (logo, shapes) for a clean and professional layout.
 
-Step 14:
+### Step 14:
 
 Created SQL query for SKU movement segmentation:
 
@@ -112,7 +112,7 @@ FROM inventory
 GROUP BY Product_ID, Category
 ORDER BY Turnover_Rate DESC;
 
-Step 15:
+### Step 15:
 
 SQL query to calculate Current Stock by Product & Store:
 
@@ -123,7 +123,7 @@ SELECT
 FROM inventory
 GROUP BY Store_ID, Product_ID;
 
-Step 16:
+### Step 16:
 
 SQL query for Inventory Turnover Ratio (ITR):
 
@@ -137,7 +137,7 @@ FROM inventory
 GROUP BY Product_ID, Category
 ORDER BY Inventory_Turnover DESC;
 
-Step 17:
+### Step 17:
 
 SQL query to analyze Promotion Impact on Sales:
 
@@ -148,7 +148,7 @@ SELECT
 FROM inventory
 GROUP BY Holiday_Promotion;
 
-Step 18:
+### Step 18:
 
 Compiled SQL results, KPIs, and visuals into a single-page PDF report, later extended into a Power BI dashboard.
 
