@@ -1,7 +1,7 @@
 # SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO.
 
 SQL-Driven Inventory Optimization & Dashboarding
-Dashboard / Report Link : [Add PDF / GitHub / Power BI link here]
+Dashboard / Report Link : [https://bitmesra-my.sharepoint.com/:u:/g/personal/btech10296_22_bitmesra_ac_in/IQB4aYn9iSjPSYK1FNPK46E-Aa9yjkPJME5xal1_WAAxxsE?e=cfi9KT]
 Problem Statement
 Urban Retail Co. faces a classic inventory dilemma—frequent stockouts of fast-moving items and overstock of slow-moving products.
 This project uses SQL-based analytics on a relational database to:
