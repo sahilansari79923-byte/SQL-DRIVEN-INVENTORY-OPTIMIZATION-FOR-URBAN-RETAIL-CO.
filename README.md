@@ -33,5 +33,6 @@ This project uses SQL-based analytics on a relational database to:
  * Calculated Inventory Turnover Ratio using SQL and visualized it with KPI cards and bar charts.
  * Analyzed promotion impact on sales using SQL and compared with visuals.
  * Exported final report as PDF and prepared it for Power BI dashboard integration.
- ![Dashboard Preview](./images/dashboard.png)
+
+![Dashboard Preview](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/Screenshot%202025-12-04%20145611.png)
 
