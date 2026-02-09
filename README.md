@@ -2,6 +2,8 @@
 ### Project Overview:
 This project tackles inventory management inefficiencies at “Urban Retail Co”, a mid-sized retailer with >5,000 SKUs across stores and warehouses. The goal is to use SQL-based analytics to reduce stockouts and overstocking by generating key metrics (stock levels, reorder points, turnover, supplier KPIs).
 ### Deliverables:
+* Problem Statement
+* Steps followed
 * SQL scripts
 * Entity Relationship Diagram (ERD)
 * Inventory KPI dashboard/report
@@ -33,6 +35,18 @@ This project uses SQL-based analytics on a relational database to:
  * Calculated Inventory Turnover Ratio using SQL and visualized it with KPI cards and bar charts.
  * Analyzed promotion impact on sales using SQL and compared with visuals.
  * Exported final report as PDF and prepared it for Power BI dashboard integration.
+### SQL scripts
+* Stock availability
+* Low stock alerts
+* Sales performance
+* Dead inventory
+* Store-wise stock
+* Demand vs stock
+* Stock-out risk
+* Inventory turnover
+* Impact of external factors
+
+
 
 ![Dashboard Preview](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/Screenshot%202025-12-04%20145611.png)
 
