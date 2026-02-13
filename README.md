@@ -48,5 +48,5 @@ This project uses SQL-based analytics on a relational database to:
 
 
 
-![Dashboard Preview](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/Screenshot%202025-12-04%20145611.png)
+![Dashboard Preview]sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/Screenshot%202025-12-04%20145611.png)
 
