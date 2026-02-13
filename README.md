@@ -1,6 +1,6 @@
 # SOLVING INVENTORY INEFFICIENCIES USING SQL (SQL SCRIPTS, SCHEMA DESIGN, KPI DASHBOARD, EXECUTIVE SUMMARY)
 ### Project Overview:
-This project tackles inventory management inefficiencies at “Urban Retail Co”, a mid-sized retailer with >5,000 SKUs across stores and warehouses. The goal is to use SQL-based analytics to reduce stockouts and overstocking by generating key metrics (stock levels, reorder points, turnover, supplier KPIs).
+This project deals inventory management inefficiencies at “Urban Retail Co”, a mid-sized retailer with >5,000 SKUs across stores and warehouses. The goal is to use SQL-based analytics to reduce stockouts and overstocking by generating key metrics (stock levels, reorder points, turnover, supplier KPIs).
 ### Deliverables:
 * Problem Statement
 * Steps followed
