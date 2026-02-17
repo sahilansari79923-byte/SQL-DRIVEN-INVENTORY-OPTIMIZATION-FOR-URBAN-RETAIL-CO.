@@ -38,12 +38,8 @@ This project uses SQL-based analytics on a relational database to:
 ### SQL scripts
 * Stock availability
 * Low stock alerts
-* Sales performance
-* Dead inventory
-* Store-wise stock
-* Demand vs stock
-* Stock-out risk
 * Inventory turnover
-* Impact of external factors
+* Demand forecasting
+* reorder quantity
 
 
