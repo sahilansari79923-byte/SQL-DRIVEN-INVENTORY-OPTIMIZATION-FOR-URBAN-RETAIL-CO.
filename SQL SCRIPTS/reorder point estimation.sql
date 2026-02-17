@@ -1,5 +1,5 @@
 WITH latest_date AS (
-    -- Step 1: Get latest date per store & product
+    -- latest date per store & product
     SELECT
         Store_ID,
         Product_ID,
@@ -9,7 +9,7 @@ WITH latest_date AS (
 ),
 
 rolling_60d AS (
-    -- Step 2: Get last 60 days sales for each store & product
+    -- last 60 days sales for each store & product
     SELECT
         s.Store_ID,
         s.Product_ID,
@@ -24,7 +24,7 @@ rolling_60d AS (
 ),
 
 demand_stats AS (
-    -- Step 3: Calculate mean and standard deviation
+    -- Calculating mean and standard deviation
     SELECT
         Store_ID,
         Product_ID,
@@ -34,7 +34,7 @@ demand_stats AS (
     GROUP BY Store_ID, Product_ID
 )
 
--- Step 4: Final Reorder Point Calculation
+-- Reorder Point Calculation
 SELECT
     Store_ID,
     Product_ID,
