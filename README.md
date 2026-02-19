@@ -42,6 +42,6 @@ This project uses SQL-based analytics on a relational database to:
 * Demand forecasting
 * reorder quantity
 ### Entity Relationship Diagram (ERD)
-![ER Diagram](https://raw.githubusercontent.com/username/repo-name/main/erd.png)
+![ER Diagram](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/README.md)
 
 
