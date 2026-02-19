@@ -41,5 +41,7 @@ This project uses SQL-based analytics on a relational database to:
 * Inventory turnover
 * Demand forecasting
 * reorder quantity
+### Entity Relationship Diagram (ERD)
+![ER Diagram](https://raw.githubusercontent.com/username/repo-name/main/erd.png)
 
 
