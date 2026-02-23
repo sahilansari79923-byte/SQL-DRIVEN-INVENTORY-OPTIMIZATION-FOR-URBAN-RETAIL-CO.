@@ -44,5 +44,5 @@ This project uses SQL-based analytics on a relational database to:
 ### Entity Relationship Diagram (ERD)
 ![ER Diagram](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/dasdas.png)
 ### Dashboard(executive summary)
-![Executive summary]()
+![Executive summary](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/inventory_management_dashboard_page-0001.jpg)
 
