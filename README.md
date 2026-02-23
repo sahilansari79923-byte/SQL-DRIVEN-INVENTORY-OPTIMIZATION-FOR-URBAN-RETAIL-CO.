@@ -43,6 +43,6 @@ This project uses SQL-based analytics on a relational database to:
 * reorder quantity
 ### Entity Relationship Diagram (ERD)
 ![ER Diagram](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/dasdas.png)
-### Dashboard(executive summary)
-![Executive summary](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/inventory_management_dashboard_page-0001.jpg)
+### Dashboard (https://bitmesra-my.sharepoint.com/:u:/g/personal/btech10296_22_bitmesra_ac_in/IQB6cZRJJ-VeRItVQMQeb098AdeUEXTIMW1bAcPQjLvXIaE?e=eClxgO)
+![Executive summar](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/inventory_management_dashboard_page-0001.jpg)
 
