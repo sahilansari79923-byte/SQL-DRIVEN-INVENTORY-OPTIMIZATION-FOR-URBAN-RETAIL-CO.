@@ -34,7 +34,6 @@ This project uses SQL-based analytics on a relational database to:
  * Wrote SQL for current stock by store and product (matrix used for low-stock alerts).
  * Calculated Inventory Turnover Ratio using SQL and visualized it with KPI cards and bar charts.
  * Analyzed promotion impact on sales using SQL and compared with visuals.
- * Exported final report as PDF and prepared it for Power BI dashboard integration.
 ### SQL scripts
 * Stock availability
 * Low stock alerts
