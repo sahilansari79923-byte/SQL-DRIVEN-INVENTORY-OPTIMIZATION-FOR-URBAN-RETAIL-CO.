@@ -44,8 +44,7 @@ Pipeline:
 ---
 ## Project Structure  
 
----
-
+```
 inventory-optimization/
 │
 ├── data/
@@ -70,9 +69,7 @@ inventory-optimization/
 │ └── executive_summary.docx
 │
 └── README.md
-
-
----
+```
 
 ## Approach  
 
