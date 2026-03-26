@@ -44,6 +44,8 @@ Pipeline:
 ---
 ## Project Structure  
 
+---
+
 inventory-optimization/
 │
 ├── data/
