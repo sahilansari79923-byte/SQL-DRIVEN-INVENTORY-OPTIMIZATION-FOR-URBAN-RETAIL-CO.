@@ -1,4 +1,4 @@
-# Inventory Optimization Analysis (SQL + BI)
+# SQL-Driven Inventory Optimization | Urban Retail Co.
 
 ## Problem Statement  
 
