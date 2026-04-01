@@ -29,7 +29,7 @@ The project focuses on:
 
 Pipeline:
 
-**Raw Data → Cleaning → SQL Analysis → KPI Layer → Power BI Dashboard**
+**Raw Data → Cleaning → EDA (Python) → SQL Analysis → KPI Layer → Power BI Dashboard**
 
 ---
 
@@ -42,33 +42,88 @@ Pipeline:
 - Inventory turnover varies widely across product categories — highlighting inefficiencies  
 
 ---
+
+## Exploratory Data Analysis (EDA)
+
+Performed on `inventory_forecasting.xlsx` — **16,383 records × 15 columns** across 5 stores, 30 SKUs, 5 categories, and 4 regions (Jan–Dec 2022). Zero missing values, zero duplicates.
+
+### KPI Snapshot
+
+| KPI | Value | Status |
+|---|---|---|
+| Stockout Rate (Inventory < 50) | **1.23%** | ✅ Low |
+| Overstock Rate (Inventory > 250) | **2.51%** | ⚠️ Moderate |
+| Demand Forecast MAPE | **15.9%** | ⚠️ Needs improvement |
+| Avg Inventory Turnover | **0.67** | Average |
+| Promo Sales Impact | **-16.2%** | 🔴 Negative |
+
+### Key EDA Findings
+
+- **Clothing** has the highest turnover (0.70); **Electronics** has the lowest (0.66) despite holding the most inventory — clear overstocking signal  
+- **Top products** (P0057, P0125) sell **~33% more** than bottom products (P0068, P0070) — inventory reallocation needed  
+- **Winter outsells Spring by 15%** — seasonal demand shift not fully reflected in ordering  
+- **Promotions show -16.2% sales** vs non-promo periods — suggests promos are deployed reactively during slow demand, not proactively  
+- **Discounts have no measurable impact** on sales volume — current discount strategy needs rethinking  
+- **Weather has no significant effect** on sales or inventory across all 4 conditions  
+- **Price tracks competitors almost perfectly** (r ≈ 0.99) — pricing is purely reactive, no differentiation  
+- **Regional performance is balanced** (<3% spread) — no major geographic underperformers  
+
+### Category × Region Avg Units Sold
+
+| Category | East | North | South | West |
+|---|---|---|---|---|
+| **Clothing** | 113.7 | 112.5 | 111.6 | 109.9 |
+| Electronics | 88.8 | 85.6 | 87.7 | 88.1 |
+| Furniture | 90.8 | 91.8 | 93.0 | 92.6 |
+| Groceries | 91.5 | 93.1 | 87.2 | 91.8 |
+| Toys | 90.7 | 96.0 | 92.2 | 91.8 |
+
+---
+
 ## Project Structure  
 
 ```
 inventory-optimization/
 │
 ├── data/
-│ ├── raw/
-│ └── processed/
+│   ├── raw/
+│   │   └── inventory_forecasting.xlsx
+│   └── processed/
+│
+├── eda/
+│   ├── eda_analysis.py
+│   └── charts/
+│       ├── distributions.png
+│       ├── correlation_heatmap.png
+│       ├── category_analysis.png
+│       ├── region_analysis.png
+│       ├── monthly_trends.png
+│       ├── forecast_vs_actual.png
+│       ├── weather_impact.png
+│       ├── promo_impact.png
+│       ├── turnover_analysis.png
+│       ├── product_performance.png
+│       └── pricing_analysis.png
 │
 ├── sql/
-│ ├── stock_availability.sql
-│ ├── low_stock_alert.sql
-│ ├── inventory_turnover.sql
-│ ├── demand_forecasting.sql
-│ ├── reorder_point.sql
-│ └── reorder_quantity.sql
+│   ├── stock_availability.sql
+│   ├── low_stock_alert.sql
+│   ├── inventory_turnover.sql
+│   ├── demand_forecasting.sql
+│   ├── reorder_point.sql
+│   └── reorder_quantity.sql
 │
 ├── dashboard/
-│ └── inventory_dashboard.pbix
+│   └── inventory_dashboard.pbix
 │
 ├── erd/
-│ └── schema_design.png
+│   └── schema_design.png
 │
 ├── report/
-│ └── executive_summary.docx
+│   └── executive_summary.docx
 │
 └── README.md
+
 ```
 
 ## Approach  
@@ -78,17 +133,23 @@ inventory-optimization/
 - Cleaned missing values, inconsistent IDs, and negative inventory  
 - Standardized data types and handled null timestamps  
 
-### 2. Database Design  
+### 2. Exploratory Data Analysis  
+- Profiled all 15 columns — distributions, correlations, and outliers  
+- Analyzed across 4 dimensions: Category, Region, Store, and Time  
+- Computed inventory KPIs: stockout rate, overstock rate, turnover, forecast MAPE  
+- Evaluated impact of promotions, discounts, weather, and seasonality on demand  
+
+### 3. Database Design  
 - Built relational schema using MySQL Workbench  
 - Defined primary & foreign keys  
 - Optimized queries using indexing  
 
-### 3. SQL Analysis  
+### 4. SQL Analysis  
 - Calculated key inventory KPIs  
 - Segmented products (Fast / Moderate / Slow) using turnover  
 - Built logic for stock alerts and reorder recommendations  
 
-### 4. Visualization  
+### 5. Visualization  
 - Created dashboard in Power BI  
 - Added filters (Store, Category, Promotions, Seasonality)  
 - Designed KPI cards and trend visuals  
@@ -139,6 +200,7 @@ inventory-optimization/
 
 ## Tools Used  
 
+- Python (Pandas, Matplotlib, Seaborn)  
 - MySQL  
 - Excel  
 - Power BI  
