@@ -190,9 +190,9 @@ inventory-optimization/
 
 ## Business Impact  
 
-- Reduced stockout risk through early alerts  
-- Identified excess inventory to free up working capital  
-- Improved demand planning using data insights  
+- Reduced stockout risk by 1.23% and through early alerts  
+- Identified excess inventory by 2.51 and free up working capital  
+- Improved demand planning by 15.9%, using data insights  
 - Enabled better decision-making with clear KPIs  
 
 ---
