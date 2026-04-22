@@ -49,13 +49,12 @@ Performed on `inventory_forecasting.xlsx` — **16,383 records × 15 columns** a
 
 ### KPI Snapshot
 
-| KPI | Value | Status |
-|---|---|---|
-| Stockout Rate (Inventory < 50) | **1.23%** | ✅ Low |
-| Overstock Rate (Inventory > 250) | **2.51%** | ⚠️ Moderate |
-| Demand Forecast MAPE | **15.9%** | ⚠️ Needs improvement |
-| Avg Inventory Turnover | **0.67** | Average |
-| Promo Sales Impact | **-16.2%** | 🔴 Negative |
+
+Stockout Rate (Inventory < 50) | **1.23%** | Low |
+Overstock Rate (Inventory > 250) | **2.51%** | Moderate |
+Demand Forecast MAPE | **15.9%** | Needs improvement |
+Avg Inventory Turnover | **0.67** | Average |
+Promo Sales Impact | **-16.2%** | Negative |
 
 ### Key EDA Findings
 
