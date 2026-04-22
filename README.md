@@ -2,17 +2,9 @@
 
 ## Problem Statement  
 
-A product goes out of stock — sales are lost.  
-Another sits in storage for months — capital is blocked.  
-
-Urban Retail Co. is facing both.
-
-This project analyzes inventory data across stores and warehouses to answer a simple but critical question:
-
-**How do we reduce stockouts *and* overstock at the same time?**
-
-Using SQL-driven analytics, the project builds a system to monitor stock, detect risks early, and optimize inventory decisions.
-
+Urban Retail Co. runs on reactive decisions. When a product runs out, someone notices. When stock sits for months, the cost quietly adds up. There's no system catching these things early just people responding after the damage is done.
+The real issues: fast-moving products go out of stock and sales walk out the door, slow-moving ones tie up capital in warehouses for weeks, and no one has clear visibility into what's happening across stores, SKUs, and suppliers until it's already a problem.
+This project builds a SQL-driven inventory system to change that — tracking stock levels, flagging low inventory before it hits zero, estimating reorder points from historical data, and identifying which products move and which don't. The goal isn't just analysis. It's giving the business something it can act on.
 ---
 
 ## Project Overview  
