@@ -11,8 +11,13 @@ The real issues:
 This project builds a SQL-driven inventory system to change that tracking stock levels, flagging low inventory before it hits zero, estimating reorder points from historical data, and identifying which products move and which don't. The goal isn't just analysis. It's giving the business something it can act on.
 
 ## BRD (Business Requirements Document)  **[Link](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/BRD/BRD_UrbanRetail_InventoryOptimization.pdf)**
+A formal BRD was prepared covering stakeholder mapping, functional requirements, 
+risk assessment, and acceptance criteria for this project.
+
 ![](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/Screenshot%202026-04-27%20003927.png)
 ## Project Structure  **[Link](https://whimsical.com/sahiljeeee/inventory-optimization-ba-process-workflow-copy-2iKnbDSuXFjGAD1Wvfofio)**
+
+End-to-end BA process flow from requirement gathering to business decision execution, Designed using Whimsical.
 ![](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/Inventory%20Optimization%20%E2%80%94%20BA%20Process%20Workflow-%402x.png)
 ## Project Overview  
 
