@@ -1,4 +1,4 @@
-# SQL-Driven Inventory Optimization | Urban Retail Co.
+# Inventory Optimization | Urban Retail Co.|Excel,SQL,PowerBI,Python
 
 ## Problem Statement  
 
@@ -7,6 +7,8 @@ The real issues: fast-moving products go out of stock and sales walk out the doo
 This project builds a SQL-driven inventory system to change that tracking stock levels, flagging low inventory before it hits zero, estimating reorder points from historical data, and identifying which products move and which don't. The goal isn't just analysis. It's giving the business something it can act on.
 ---
 
+## Project Structure
+![](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/Inventory%20Optimization%20%E2%80%94%20BA%20Process%20Workflow%20(coppy).png)
 ## Project Overview  
 
 Urban Retail Co. is a mid-sized retailer managing **5,000+ SKUs** across multiple locations.
