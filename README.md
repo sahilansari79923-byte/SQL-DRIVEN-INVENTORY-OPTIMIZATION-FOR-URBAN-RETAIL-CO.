@@ -8,7 +8,7 @@ This project builds a SQL-driven inventory system to change that tracking stock 
 ---
 
 ## Project Structure
-![](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/Inventory%20Optimization%20%E2%80%94%20BA%20Process%20Workflow%20(coppy).png)
+![](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/Inventory%20Optimization%20%E2%80%94%20BA%20Process%20Workflow-%402x.png)
 ## Project Overview  
 
 Urban Retail Co. is a mid-sized retailer managing **5,000+ SKUs** across multiple locations.
