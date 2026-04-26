@@ -3,12 +3,16 @@
 ## Problem Statement  
 
 Urban Retail Co. runs on reactive decisions. When a product runs out, someone notices. When stock sits for months, the cost quietly adds up. There's no system catching these things early just people responding after the damage is done.
-The real issues: fast-moving products go out of stock and sales walk out the door, slow-moving ones tie up capital in warehouses for weeks, and no one has clear visibility into what's happening across stores, SKUs, and suppliers until it's already a problem.
+The real issues: 
+- fast-moving products go out of stock and sales walk out the door
+- slow-moving ones tie up capital in warehouses for weeks
+- no one has clear visibility into what's happening across stores, SKUs, and suppliers until it's already a problem.
+
 This project builds a SQL-driven inventory system to change that tracking stock levels, flagging low inventory before it hits zero, estimating reorder points from historical data, and identifying which products move and which don't. The goal isn't just analysis. It's giving the business something it can act on.
----
-## BRD(Business Requirements Document) **[Link](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/BRD/BRD_UrbanRetail_InventoryOptimization.pdf)**
+
+## BRD (Business Requirements Document)  **[Link](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/BRD/BRD_UrbanRetail_InventoryOptimization.pdf)**
 ![](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/Screenshot%202026-04-27%20003927.png)
-## Project Structure
+## Project Structure  **[Link](https://whimsical.com/sahiljeeee/inventory-optimization-ba-process-workflow-copy-2iKnbDSuXFjGAD1Wvfofio)**
 ![](https://github.com/sahilansari79923-byte/SQL-DRIVEN-INVENTORY-OPTIMIZATION-FOR-URBAN-RETAIL-CO./blob/main/snaps%20shorts/Inventory%20Optimization%20%E2%80%94%20BA%20Process%20Workflow-%402x.png)
 ## Project Overview  
 
@@ -24,7 +28,7 @@ The project focuses on:
 
 Pipeline:
 
-**Raw Data → Cleaning → EDA (Python) → SQL Analysis → KPI Layer → Power BI Dashboard**
+**BRD → Workflow(Whimsical) → Raw Data → Cleaning → EDA (Python) → SQL Analysis → KPI Layer → Power BI Dashboard**
 
 ---
 
