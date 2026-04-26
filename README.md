@@ -154,7 +154,7 @@ Promo Sales Impact | **-16.2%** | Negative |
 ---
 
 ## Tools Used  
-
+- Whimsical
 - Python (Pandas, Matplotlib, Seaborn)  
 - MySQL  
 - Excel  
